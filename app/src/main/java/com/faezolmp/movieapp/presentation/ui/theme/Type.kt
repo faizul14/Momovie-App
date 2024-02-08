@@ -1,4 +1,4 @@
-package com.faezolmp.movieapp.ui.theme
+package com.faezolmp.movieapp.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

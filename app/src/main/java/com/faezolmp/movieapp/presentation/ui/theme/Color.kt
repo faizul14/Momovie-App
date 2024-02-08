@@ -1,4 +1,4 @@
-package com.faezolmp.movieapp.ui.theme
+package com.faezolmp.movieapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
