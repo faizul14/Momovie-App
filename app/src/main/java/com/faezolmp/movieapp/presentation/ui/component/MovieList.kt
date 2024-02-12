@@ -12,13 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.faezolmp.movieapp.R
 import com.faezolmp.movieapp.presentation.ui.theme.MovieAppTheme
-import kotlin.math.log
 
 @Composable
 fun MovieListItem(
@@ -31,7 +28,7 @@ fun MovieListItem(
 
     ) {
         AsyncImage(
-            model = "http://image.tmdb.org/t/p/w500${posterPath}",
+            model = "http://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
             contentDescription = "photoMovie",
             contentScale = ContentScale.Crop,
 //            modifier = modifier.fillMaxSize()

@@ -2,7 +2,6 @@ package com.faezolmp.movieapp.presentation.ui.screen.movies
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
@@ -45,7 +44,11 @@ fun MoviesContent(
     LazyColumn {
         items(moviesList) {
 //            Text(text = it.title.toString())
-            MovieListItem(title = it.title.toString(), posterPath = it.backdropPath.toString() , modifier = modifier )
+            MovieListItem(
+                title = it.title.toString(),
+                posterPath = it.posterPath.toString(),
+                modifier = modifier
+            )
         }
     }
 }

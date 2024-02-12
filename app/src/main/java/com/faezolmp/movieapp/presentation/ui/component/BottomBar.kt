@@ -24,15 +24,14 @@ import com.faezolmp.movieapp.presentation.ui.theme.MovieAppTheme
 
 @Composable
 fun BottomBar(
-    modifier: Modifier = Modifier,
-    navcontroller: NavHostController
+    modifier: Modifier = Modifier, navcontroller: NavHostController
 ) {
     val navBackStackEntry by navcontroller.currentBackStackEntryAsState()
     val currentRout = navBackStackEntry?.destination?.route
 
-    NavigationBar (
+    NavigationBar(
         modifier = modifier
-    ){
+    ) {
         val navigationItems = listOf(
             NavigationItem(
                 tittle = stringResource(R.string.menu_home),
@@ -57,29 +56,23 @@ fun BottomBar(
         )
 
         navigationItems.map {
-            NavigationBarItem(
-                onClick = {
-                          navcontroller.navigate(it.screen.route){
-                              popUpTo(navcontroller.graph.findStartDestination().id){
-                                  saveState = true
-                              }
-                              restoreState = true
-                              launchSingleTop = true
-                          }
-                },
-                selected = currentRout == it.screen.route,
-                icon = {
-                    Icon(
-                        imageVector = it.icon,
-                        contentDescription = it.tittle
-                    )
-                },
-                label = {
-                    Text(
-                        text = it.tittle
-                    )
+            NavigationBarItem(onClick = {
+                navcontroller.navigate(it.screen.route) {
+                    popUpTo(navcontroller.graph.findStartDestination().id) {
+                        saveState = true
+                    }
+                    restoreState = true
+                    launchSingleTop = true
                 }
-            )
+            }, selected = currentRout == it.screen.route, icon = {
+                Icon(
+                    imageVector = it.icon, contentDescription = it.tittle
+                )
+            }, label = {
+                Text(
+                    text = it.tittle
+                )
+            })
         }
     }
 }

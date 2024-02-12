@@ -1,7 +1,5 @@
-package com.faezolmp.movieapp.presentation.ui.screen
+package com.faezolmp.movieapp.presentation.ui.application
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -32,24 +30,23 @@ fun MoviesApp(
             BottomBar(
                 navcontroller = navcontroller
             )
-        },
-        modifier = modifier
+        }, modifier = modifier
     ) { innerPadding ->
         NavHost(
             navController = navcontroller,
             startDestination = Screen.Home.route,
             modifier = modifier.padding(innerPadding)
-        ){
-            composable(Screen.Home.route){
+        ) {
+            composable(Screen.Home.route) {
                 HomeScreen()
             }
-            composable(Screen.Movie.route){
+            composable(Screen.Movie.route) {
                 ScreenMovies()
             }
-            composable(Screen.Tv.route){
+            composable(Screen.Tv.route) {
                 TvScreen()
             }
-            composable(Screen.Profile.route){
+            composable(Screen.Profile.route) {
                 ProfileScreen()
             }
 
