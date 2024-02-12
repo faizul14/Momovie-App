@@ -98,5 +98,11 @@ dependencies {
     //work
     implementation("androidx.work:work-runtime-ktx:2.8.0")
     // pagination
-    implementation ("androidx.paging:paging-runtime:3.2.0-alpha06")
+//    implementation ("androidx.paging:paging-runtime:3.2.0-alpha06")
+    // coil
+    implementation ("io.coil-kt:coil-compose:2.2.0")
+    // compose viewModel
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    // compose navigation
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
 }
